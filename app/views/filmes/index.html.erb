@@ -1,28 +1,31 @@
+<%= stylesheet_link_tag "abc.css" %>
+
 <p id="notice"><%= notice %></p>
-
-<h1>Filmes</h1>
-
-<table>
+<table width="100%" height=50px>
+	<tr>
+		<th id="t01">Rotten Potatoes!</th>
+	</tr>
+</table>
+<table width="100%" cellspacing="1">
   <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Classificacao</th>
-      <th>Lancamento</th>
-      <th>Sinopse</th>
-      <th colspan="3"></th>
+    <tr bgcolor="black">
+      <th id="t02" width="500px">Título</th>
+      <th id="t02" width="120px"><center>Classificação<center></th>
+      <th id="t02" width="250px"><center>Lançamento</center></th>
+      <th id="t02" width="100px"><center>Sinopse</center></th>
+      <th id="t02" colspan="3">Modificar</th>
     </tr>
   </thead>
 
   <tbody>
     <% @filmes.each do |filme| %>
-      <tr>
+      <tr height=20px>
         <td><%= filme.titulo %></td>
-        <td><%= filme.classificacao %></td>
-        <td><%= filme.lancamento %></td>
-        <td><%= filme.sinopse %></td>
-        <td><%= link_to 'Show', filme %></td>
-        <td><%= link_to 'Edit', edit_filme_path(filme) %></td>
-        <td><%= link_to 'Destroy', filme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><center><%= filme.classificacao %></center></td>
+        <td><center><%= filme.lancamento %><center></td>
+        <td><center><%= link_to 'Mostrar', filme %></center></td>
+        <td><center><%= link_to 'Editar', edit_filme_path(filme) %></center></td>
+        <td><center><%= link_to 'Remover', filme, method: :delete, data: { confirm: 'Remover?' } %></center></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Filme', new_filme_path %>
+<%= link_to 'Novo filme', new_filme_path %>
