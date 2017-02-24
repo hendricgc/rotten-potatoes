@@ -5,17 +5,17 @@ class FilmesControllerTest < ActionDispatch::IntegrationTest
     @filme = filmes(:one)
   end
 
-  test "should get index" do
+  test "entrar na pagina inicial" do
     get filmes_url
     assert_response :success
   end
 
-  test "should get new" do
+  test "entrar na pagina novo filme" do
     get new_filme_url
     assert_response :success
   end
 
-  test "should create filme" do
+  test "criar filne" do
     assert_difference('Filme.count') do
       post filmes_url, params: { filme: { classificacao: @filme.classificacao, lancamento: @filme.lancamento, sinopse: @filme.sinopse, titulo: @filme.titulo } }
     end
@@ -23,17 +23,17 @@ class FilmesControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to filme_url(Filme.last)
   end
 
-  test "should show filme" do
+  test "mostrar filme" do
     get filme_url(@filme)
     assert_response :success
   end
 
-  test "should get edit" do
+  test "editar filme" do
     get edit_filme_url(@filme)
     assert_response :success
   end
 
-  test "should update filme" do
+  test "atualizar filme" do
     patch filme_url(@filme), params: { filme: { classificacao: @filme.classificacao, lancamento: @filme.lancamento, sinopse: @filme.sinopse, titulo: @filme.titulo } }
     assert_redirected_to filme_url(@filme)
   end

@@ -18,8 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'rspec', '~> 3.0' 
-gem 'pg', '0.18'
+gem 'pg', '~> 0.18'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,6 +39,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'cucumber'
+  gem 'rspec'
+  gem 'rspec-rails', ">= 2.0.0.beta"
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -52,7 +56,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '0.18'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
