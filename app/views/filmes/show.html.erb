@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<table width="100%" height=50px>
+	<tr>
+		<th id="t01">Rotten Potatoes!</th>
+	</tr>
+</table>
 
 <p>
-  <strong>Titulo:</strong>
-  <%= @filme.titulo %>
+  <h1><%= @filme.titulo %></h1>
 </p>
 
 <p>
-  <strong>Classificacao:</strong>
-  <%= @filme.classificacao %>
+  <li><strong>Classificação:</strong>
+  <%= @filme.classificacao %> estrelas</li>
 </p>
 
 <p>
-  <strong>Lancamento:</strong>
-  <%= @filme.lancamento %>
+  <li><strong>Lançamento:</strong>
+  <%= @filme.lancamento %></li>
 </p>
 
 <p>
-  <strong>Sinopse:</strong>
+  <h3><strong>Sinopse:<br></strong></h3>
   <%= @filme.sinopse %>
 </p>
 
-<%= link_to 'Edit', edit_filme_path(@filme) %> |
-<%= link_to 'Back', filmes_path %>
+<%= link_to 'Editar', edit_filme_path(@filme) %> |
+<%= link_to 'Voltar', filmes_path %>

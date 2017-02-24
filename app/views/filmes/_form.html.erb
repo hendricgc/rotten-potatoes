@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo %>
+    <%= f.label :"Título" %>
     <%= f.text_field :titulo %>
   </div>
 
   <div class="field">
-    <%= f.label :classificacao %>
-    <%= f.text_field :classificacao %>
+    <%= f.label :"Classificação" %>
+    <%= f.select :classificacao, options_for_select([["1", "Um"], ["2", "Dois"], ["3", "Tres"], ["4", "Quatro"], ["5", "Cinco"]]) %>
   </div>
 
   <div class="field">
-    <%= f.label :lancamento %>
+    <%= f.label :"Lançamento" %>
     <%= f.datetime_select :lancamento %>
   </div>
 
@@ -32,6 +32,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar" %>
   </div>
 <% end %>
